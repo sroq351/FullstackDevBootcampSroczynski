@@ -1,10 +1,7 @@
-window.onload =function(){
-const button = document.querySelector('#actionButton')
-const inputBox = document.querySelector ('#inputBox')
-const message = document.querySelector ('#message')
+let zmienna1= 12
+console.log(zmienna1)
+console.log (typeof zmienna1)
 
-button.addEventListener("click", function(){
-    alert ("click")
-    message.innerHTML = '<h1> aaaa</h1>'
-})
-}
+let zmienna2 = "jezyk java script"
+console.log (zmienna2)
+console.log (typeof zmienna2)
