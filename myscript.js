@@ -1,22 +1,10 @@
-function basicAdd(a,b) {
-    return a + b
-}
+window.onload =function(){
+const button = document.querySelector('#actionButton')
+const inputBox = document.querySelector ('#inputBox')
+const message = document.querySelector ('#message')
 
-const newAdd = (a,b) =>  a +b
-
-const addAndPrint = (a, b)=> {
-    let ret = a+b
-    console.log ("add and print", ret)
-    return ret
-}
-window.onload = function (){
-console.log (basicAdd (2,2))
-
-console.log ("New add:" +newAdd(2,2))
-addAndPrint(2,2);
-}
-
-let array = [1,2,3,4]
-array.forEach(element => {
-    console.log(element)
+button.addEventListener("click", function(){
+    alert ("click")
+    message.innerHTML = '<h1> aaaa</h1>'
 })
+}
