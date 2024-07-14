@@ -1,7 +1,18 @@
-let zmienna1= 12
-console.log(zmienna1)
-console.log (typeof zmienna1)
+function doThings(){
+    return Promise.resolve ("ok")
+}
+doThings () 
+    .then (res => {
+        console.log (res)
+    })
 
-let zmienna2 = "jezyk java script"
-console.log (zmienna2)
-console.log (typeof zmienna2)
+
+// async
+async function doThingsAsync () {
+    return "ok async"
+}
+
+doThingsAsync ()
+    .then (res => {
+        console.log (res)
+    })
