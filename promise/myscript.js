@@ -1,10 +1,20 @@
-const promise = new promise((resolve,reject) => {
-    if 1 ==1 {
-        resolve ("ALL OK")
-    }else{
-        reject ("NOT OK")
-    }
+function doSomething (){
+return  new Promise((resolve,reject) => {
+    setTimeout(() => {
+        resolve("Data downloaded succesfully")
+        reject("error while data downloading")
+    }, 5000)
+})
+}
+doSomething ()
+    .then (result => {
+        console.log ("Success")
+        console.log ("Success")
+        console.log ("Success")
+        console.log ("Success")
+        console.log ("Success")
+        console.log ("Success")
     })
-    promise.then (result => {
-        console.log(result)
+    .catch(error => {
+        console.log(error)
     })
