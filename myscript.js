@@ -1,40 +1,21 @@
-function loadUserData () {
-    return new Promise ((resolve, reject) => {
-        setTimeout(() => {
-            resolve ("a")
-        },1000)
-    })
-}
-function loadBooks (){
-    return new Promise ((resolve, reject) => {
-        setTimeout(() => {
-            reject ("Error while downloading books")
-            }, 1000)
-        })
-}
-function loadPets(){
-    return new Promise ((resolve, reject) => {
-        setTimeout(() => {
-            resolve ("C")
-            }, 1000)
-        })
-}       
-async function render () {
-    const user =await loadUserData ()
-    let books 
-    loadBooks()
-        .then(res => {
-            books = res
-        })
-        .catch (err => {
-            console.log(err)
-            books=""
-        })
-
-    const pets = await loadPets ()
-    console.log(user,books,pets)
+class AppConfig {
+   constructor (number =15){
+    if(AppConfig.exists) {
+        return AppConfig.instance
+    }
+    this.randomNumber=Math.random()
+    this.number=number
+    AppConfig.exists = true
+    AppConfig.instance = this
+    return this 
+    }
 }
 
-window.onload = function () {
-    render ()
-}
+
+const configObject = new AppConfig (8)
+const configObject2= new AppConfig (1)
+const configObject3= new AppConfig (6)
+
+console.log (configObject)
+console.log (configObject2)
+console.log (configObject3)
