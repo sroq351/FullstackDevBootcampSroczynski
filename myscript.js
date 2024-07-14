@@ -1,21 +1,23 @@
-class AppConfig {
-   constructor (number =15){
-    if(AppConfig.exists) {
-        return AppConfig.instance
+class Product{
+
+    constructor(width,height,weight){
+        this.width = width
+        this.height= height
+        this.weight= weight
     }
-    this.randomNumber=Math.random()
-    this.number=number
-    AppConfig.exists = true
-    AppConfig.instance = this
-    return this 
+    display (){
+        console.log("Product" + this.width + " " + this.height + " " + this.weight)
     }
 }
 
+class ProductFactory  {
+    createProduct (width,height,weight){
+        return new Product(width,height,weight)
+    }
+}
+const factory = new ProductFactory()
 
-const configObject = new AppConfig (8)
-const configObject2= new AppConfig (1)
-const configObject3= new AppConfig (6)
-
-console.log (configObject)
-console.log (configObject2)
-console.log (configObject3)
+const product = factory.createProduct(20,20,20);
+const product2 = factory.createProduct(10,20,30);
+product.display()
+product2.display()
