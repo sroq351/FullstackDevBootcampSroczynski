@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+ p {
+    font-size: large;
+    margin-left: 40 px;
+    font-size: 60px;
+    color: red;
+    border-bottom: 3px solid brown;
+    display:inline-block
+  
+}
+
+    
+    
+  
