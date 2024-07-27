@@ -1,6 +1,6 @@
 //Let's assume that we would like to create some textarea element with counter to show live how many chars user used for them message:
 
-const message = document.querySelector('#message');
+const message = document.querySelector('#message');s
 const counter = document.querySelector('#counter');
 
 message.addEventListener('input', event => {
