@@ -1,19 +1,27 @@
-const Player = function(nick,email){
-this.nick=nick
-this.email=email
-this.shoot = () => console.log ("SHOOT")
-}
+//Let's assume that we would like to create some textarea element with counter to show live how many chars user used for them message:
 
-Player.prototype.login = () => console.log ("Logged!")
-Player.prototype.logout =() =>console.log ("Logout!")
-Player.prototype.moveLeft =() =>console.log ("Go Left!")
-Player.prototype.moveRight =() =>console.log ("Go right!")
+const message = document.querySelector('#message');
+const counter = document.querySelector('#counter');
 
+message.addEventListener('input', event => {
+    const length = event.target.value.length;
+    counter.textContent = length;
+     
+    if (length > 50) {
+     counter.style.color = 'red';
+    } else {
+     counter.style.color = 'black';
+    }
+   });
+//How to create new DOM element?
 
-const player1 = new Player ("Nick1", "example1@example.pl")
-const player2 = new Player ("Nick2", "example2@example.pl")
-const player3 = new Player ("Nick3", "example3@example.pl")
+   const button = document.getElementById("addElement");
+   
+   button.addEventListener("click",()=> {
+    const heading = document.createElement("h2")
+    heading.textContent= "Hello";
+    heading.style.color= "green";
+    heading.style.FontSize "12px"
 
-console.log (player1)
-console.log (player2)
-console.log (player3)
+    document.body.appendChild(heading)
+   })
