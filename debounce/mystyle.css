@@ -1,0 +1,32 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+#myParagraph {
+
+ color: red;   
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+.labels {
+    width: 200px;
+    display: grid;
+    justify-items:end ;
+    
+    
+  }
+  .operations {
+    width: 350px;
+    border-style:solid
+
+    
+    
+  }
